@@ -22,7 +22,7 @@ void print_arr(T arr[], const int length) {
 //Задача3.Возврат индекса первого вхождения в массив.
 template<typename T>
 int search_index(T arr[], const int length, int value, int begin = 0) {
-	for (int i = 0; i < length, i++)
+	for (int i = begin; i < length; i++)
 		if (arr[i] == value)
 			return i;
 	return -1;
@@ -31,14 +31,14 @@ int search_index(T arr[], const int length, int value, int begin = 0) {
 //Задача4. Возврат индекса последнего вхождения элемента в массив.
 template<typename T>
 int search_last_index(T arr[], const int length, int value) {
-	for (int i = length-1; i >=0, i--)
+	for (int i = length - 1; i >= 0; i--)
 		if (arr[i] == value)
 			return i;
 	return -1;
 }
 template<typename T>
 int search_last_index(T arr[], const int length, int value, int begin) {
-	for (int i = begin; i>=0; i++)
+	for (int i = begin; i >= 0; i++)
 		if (arr[i] == value)
 			return i;
 	return -1;
@@ -95,7 +95,7 @@ void bubble_sort(T arr[], const int length) {
 	for (int i = length - 1; i > 0; i--)
 		for (int j = 0; j < i; j++)
 			if (arr[j] > arr[j + 1])
-				std::swap(arr[j], arr[j+1]);
+				std::swap(arr[j], arr[j + 1]);
 }
 
 
